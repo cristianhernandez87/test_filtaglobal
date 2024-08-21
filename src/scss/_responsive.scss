@@ -1,0 +1,40 @@
+// responsive		
+
+@mixin breakpoint($point) {
+	@if $point == cero {
+		@media (min-width: 0) { @content ; }
+	}
+	@if $point == mobile {
+		@media (min-width: 540px) { @content ; }
+	}
+	@else if $point == max-tablet {
+		@media (max-width: 720px) { @content ; }
+	}
+	@else if $point == max-tablet-custom {
+		@media (max-width: 767px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 720px) { @content ; }
+	}
+	@else if $point == desktop {
+		@media (min-width: 992px) { @content ; }
+	}
+	@else if $point == extra {
+		@media (min-width: 1140px) { @content ; }
+	}
+	@else if $point == extra-plus {
+		@media (min-width: 1200px) { @content ; }
+	}
+	@else if $point == mega {
+		@media (min-width: 1366px) { @content ; }
+	}
+	@else if $point == d_1440 {
+		@media (min-width: 1440px) { @content ; }
+	}
+	@else if $point == d_1600 {
+		@media (min-width: 1600px) { @content ; }
+	}
+	@else if $point == d_1920 {
+		@media (min-width: 1920px) { @content ; }
+	}
+}

@@ -1,0 +1,21 @@
+@import '~normalize-scss';
+@import '~bootstrap/scss/bootstrap';
+// theme
+@import 'colors';
+@import 'fonts';
+@import 'mixing_artefacts';
+@import 'responsive';
+@import 'text';
+@import 'images';
+@import 'margin_padding';
+@import 'general';
+
+// boards
+@import '../components/boards/b-card/b-card';
+
+// resources
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';

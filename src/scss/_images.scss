@@ -1,0 +1,11 @@
+.img {
+    &.img {
+        &-auto { object-fit: cover;}
+        &-contain { object-fit: contain;}
+        &-w { width: 100%; }
+        &-h {
+            height: 100%;
+            &-50 { height: 50%; }
+        }
+    }
+}

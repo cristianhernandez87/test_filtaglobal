@@ -1,0 +1,47 @@
+// mixins - artefacts
+
+%general_shadow {
+	box-shadow: 7px 7px 20px 0 rgba(50, 50, 50, 0.32);
+
+	&:hover {
+		box-shadow: 7px 7px 20px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+
+@mixin supertransformation($transforms) {
+	-moz-transition: all $transforms ease;
+	-ms-transition: all $transforms ease;
+	-o-transition: all $transforms ease;
+	-webkit-transition: all $transforms ease;
+	transition: all $transforms ease;
+}
+
+%transform_025 { @include supertransformation(0.25s); }
+%transform_05 { @include supertransformation(0.5s); }
+%transform_07 { @include supertransformation(0.7s); }
+%transform_1 { @include supertransformation(1s); }
+%transform_2 { @include supertransformation(2s); }
+%transform_3 { @include supertransformation(3s); }
+%transform_4 { @include supertransformation(4s); }
+%transform_5 { @include supertransformation(5s); }
+
+%after-before-bas {
+	content: ' ';
+	position: absolute;
+}
+
+@mixin linear-gradient($from, $to) {
+	background: $to;
+	background: -moz-linear-gradient(left, $from 0%, $to 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $from), color-stop(100%, $to));
+	background: -webkit-linear-gradient(left, $from 0%, $to 100%);
+	background: -o-linear-gradient(left, $from 0%, $to 100%);
+	background: linear-gradient(to right, $from 0%, $to 100%);
+	filter: progid:dximagetransform.microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to});
+}
+
+@mixin border-radius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}

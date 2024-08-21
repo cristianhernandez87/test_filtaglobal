@@ -1,0 +1,20 @@
+.b-card {
+    * { @extend %transform_05 }
+    .images {
+        border-bottom: 2px solid $color_primary;
+    }
+    .action {
+        @extend %transform_05;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $color_primary;
+        text-decoration: none;
+    }
+
+    &:hover {
+        .images {
+            border-width: 1rem;
+            .img { transform: scale(1.3);}
+        }
+        .action { border-width: .5rem; }
+    }
+}
